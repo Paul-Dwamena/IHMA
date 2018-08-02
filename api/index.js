@@ -31,6 +31,7 @@ mongoose.connect(db.name,(err)=>{
     const User = require('./routes/modules/User')
     const Drug = require('./routes/modules/DrugController')
     const Pharmacy = require('./routes/modules/PharmarcyController')
+    const Bed=require('./routes/modules/bedController')
 
     //For Devs only
     const FeatureController = require('./routes/Features/FeaturesController')
@@ -47,6 +48,7 @@ mongoose.connect(db.name,(err)=>{
     app.use('/user', User)
     app.use('/drug',Drug)
     app.use('/pharmacy',Pharmacy)
+    app.use('/bed',Bed)
       
     var server = app.listen(80);
     //var socket = require('socket.io')
